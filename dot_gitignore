@@ -1,0 +1,10 @@
+# IntelliJ IDE's
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# VSCode
+.vscode/
+
+.dotfiles/
