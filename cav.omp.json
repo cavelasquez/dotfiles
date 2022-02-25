@@ -1,25 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
-    {
-      "alignment": "right",
-      "segments": [
-        {
-          "foreground": "#007ACC",
-          "properties": {
-            "template": " {{ .CurrentDate | date .Format }} ",
-            "time_format": "15:04:05"
-          },
-          "style": "plain",
-          "type": "time"
-        }
-      ],
-      "type": "prompt",
-      "vertical_offset": -1
-    },
-    {
-      "type": "newline"
-    },
+    
+    
     {
       "alignment": "left",
       "segments": [
@@ -28,10 +11,11 @@
           "foreground": "#100e23",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "template": " CAV@TnS "
+            "template": " {{ .CurrentDate | date .Format }} ",
+            "time_format": "15:04:05"
           },
           "style": "powerline",
-          "type": "session"
+          "type": "time"
         },
         {
           "type": "shell",
@@ -42,7 +26,7 @@
           "properties": {
             "mapped_shell_names": {
               "pwsh": "PwSh", 
-              "dotnet": "ps"
+              "dotnet": "PwSh"
             }
           }
         },

@@ -119,7 +119,7 @@ alias config='cm edit $1'
 
 [[ -f ~/.nnn ]] && . ~/.nnn
 
-source /usr/share/nvm/init-nvm.sh
+[[ -f /usr/share/nvm/init-nvm.sh ]] && . /usr/share/nvm/init-nvm.sh
 
 eval "$(oh-my-posh --init --shell bash --config ~/cav.omp.json)"
 
