@@ -1,23 +1,15 @@
-{{- $name := "" -}}
-{{- if hasKey . "name" -}}
-{{-   $name = .name -}}
-{{- end -}}
-
-{{- $email := "" -}}
-{{- if hasKey . "email" -}}
-{{-   $email = .email -}}
-{{- end -}}
-
 [user]
-	name = {{ $name }}
-	email = {{ $email }}
+	name = CAVelasquez
+	email = 13258178+cavelasquez@users.noreply.github.com
+[includeIf "gitdir:/work/"]
+	path = ~/.gitconfig.work
 [http]
-        sslVerify = true
+	sslVerify = true
 [pull]
 	rebase = false
 [core]
 	editor = vim
-        autocrlf = true
+	autocrlf = true
 	excludesfile = ~/.gitignore
 [init]
 	defaultBranch = main
