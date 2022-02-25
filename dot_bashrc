@@ -121,5 +121,5 @@ alias config='cm edit $1'
 
 source /usr/share/nvm/init-nvm.sh
 
-
+eval "$(oh-my-posh --init --shell bash --config ~/cav.omp.json)"
 

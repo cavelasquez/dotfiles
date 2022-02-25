@@ -1,0 +1,93 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#007ACC",
+          "properties": {
+            "template": " {{ .CurrentDate | date .Format }} ",
+            "time_format": "15:04:05"
+          },
+          "style": "plain",
+          "type": "time"
+        }
+      ],
+      "type": "prompt",
+      "vertical_offset": -1
+    },
+    {
+      "type": "newline"
+    },
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#ffffff",
+          "foreground": "#100e23",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "template": " CAV@TnS "
+          },
+          "style": "powerline",
+          "type": "session"
+        },
+        {
+          "type": "shell",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#0077c2",
+          "properties": {
+            "mapped_shell_names": {
+              "pwsh": "PwSh", 
+              "dotnet": "ps"
+            }
+          }
+        },
+        {
+          "type": "os",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#26C6DA",
+          "background": "#546E7A",
+          "properties": {
+            "template": " {{ if .WSL }}WSL {{ end }}{{.Icon}} ",
+            "macos": "mac"
+          }
+        },
+        {
+          "background": "#91ddff",
+          "foreground": "#100e23",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "folder_icon": "\uf115",
+            "folder_separator_icon": " \ue0b1 ",
+            "home_icon": "\uf7db",
+            "style": "agnoster_short",
+            "template": " {{ .Path }} "
+          },
+          "style": "powerline",
+          "type": "path"
+        },
+        {
+          "background": "#95ffa4",
+          "foreground": "#193549",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "template": " {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}} \uf692 {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}} \uf1bb {{ .WorktreeCount }}{{ end }} "
+          },
+          "style": "powerline",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 1
+}
