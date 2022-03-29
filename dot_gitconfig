@@ -49,3 +49,5 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+[remote "origin"]
+	prune = true
