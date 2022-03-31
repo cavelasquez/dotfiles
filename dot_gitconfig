@@ -15,6 +15,7 @@
 	defaultBranch = main
 [alias]
 	unstage = reset HEAD --
+	sw = switch
 	co = checkout
 	br = branch
 	st = status
@@ -28,6 +29,7 @@
 	ready = rebase -i
 	diff2 = diff --word-diff
 	show2 = show --word-diff
+	l10 = log --oneline -10
 	lol = log --color --graph --decorate --pretty=oneline --abbrev-commit --all
 	lol2 = log --color --graph --decorate --pretty=format:'%C(bold yellow)%h%Creset%C(auto)%d%Creset %s %Cgreen(%ci, %cr) %C(bold blue)<%an, %ae>%Creset' --abbrev-commit --all
 	lol3 = !git log --pretty=format:'%Cred---------------------------------------------------------------%n%C(bold yellow)%h %C(auto)%d %Cgreen(%ci, %cr) %C(bold blue)<%an, %ae>%Creset%n%s%n%n%b%n' --abbrev-commit --date=relative --graph --date-order --stat --color | less -cR
