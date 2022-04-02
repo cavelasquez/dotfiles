@@ -110,6 +110,10 @@ alias cm='chezmoi'
 alias config='cm edit $1'
 
 
+# COMPLETION 
+complete -cf sudo # commands and filenames, https://linux.die.net/man/1/bash
+[[ -f /etc/bash_completion ]] && . /etc/bash_completion
+
 # NumLock ON - works after login
 # setleds -D +num
 
