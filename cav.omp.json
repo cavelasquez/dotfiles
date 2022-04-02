@@ -7,7 +7,6 @@
         {
           "foreground": "cyan",
           "style": "powerline",
-          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}}",
           "type": "os"
         },
         {
@@ -16,7 +15,6 @@
             "style": "full"
           },
           "style": "plain",
-          "template": " {{ .Path }} ",
           "type": "path"
         },
         {
@@ -25,7 +23,6 @@
             "fetch_status": true
           },
           "style": "plain",
-          "template": ":: {{ .HEAD }}{{ .BranchStatus }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }} ",
           "type": "git"
         }
       ],
@@ -37,19 +34,16 @@
         {
           "foreground": "red",
           "style": "plain",
-          "template": "| root ",
           "type": "root"
         },
         {
           "foreground": "#06A4CE",
           "style": "powerline",
-          "template": "| \ue798 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
           "type": "dart"
         },
         {
           "foreground": "#6CA35E",
           "style": "powerline",
-          "template": "| \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
         {
@@ -59,7 +53,6 @@
             "fetch_virtual_env": true
           },
           "style": "plain",
-          "template": "| \ue235 {{ .Venv }} ",
           "type": "python"
         },
         {
@@ -74,13 +67,11 @@
             "charging_icon": "\ue234 "
           },
           "style": "powerline",
-          "template": "| {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }} \uf295 ",
           "type": "battery"
         },
         {
           "foreground": "lightGreen",
           "style": "plain",
-          "template": "| {{ .CurrentDate | date .Format }} ",
           "type": "time"
         }
       ],
@@ -99,12 +90,11 @@
             "always_enabled": true
           },
           "style": "powerline",
-          "template": "\u279c ",
           "type": "exit"
         }
       ],
       "type": "prompt"
     }
   ],
-  "version": 2
+  "version": 1
 }
